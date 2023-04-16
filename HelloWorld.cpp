@@ -2,6 +2,32 @@
 #include <iostream>
 #include <vector>
 #include <string>
+
+// #0623F9 - Blue color
+#define ANSI_BLUE "\033[38;2;6;35;249m"
+
+// #F9DC06 - Yellow color
+#define ANSI_YELLOW "\033[38;2;249;220;6m"
+
+// #14CBEB - Cyan color
+#define ANSI_CYAN "\033[38;2;20;203;235m"
+
+// #EB3414 - Red color
+#define ANSI_RED "\033[38;2;235;52;20m"
+
+// #9D7662 - Brown color
+#define ANSI_BROWN "\033[38;2;157;118;98m"
+
+// #BD42B1 - Magenta color
+#define ANSI_MAGENTA "\033[38;2;189;66;177m"
+
+// #00FF58 - Green color
+#define ANSI_GREEN "\033[38;2;0;255;88m"
+
+// Reset to default color
+#define ANSI_RESET "\033[0m"
+
+
 using namespace std;
 
 //class for storing product information
@@ -87,15 +113,16 @@ int main() {
 
     int choice;
     while (true) {
-        cout << "Medical Store Management System" << endl;
-        cout << "1. Add Product" << endl;
-        cout << "2. Display Inventory" << endl;
-        cout << "3. Search Product" << endl;
-        cout << "4. Sell Product" << endl;
-        cout << "5. Exit" << endl;
+        cout << ANSI_GREEN << "Medical Store Management System" << ANSI_RESET << endl;
+        cout << "1. " << ANSI_BLUE << "Add "<< ANSI_RESET << "Product" << endl;
+        cout << "2. " << ANSI_YELLOW << "Display "<< ANSI_RESET <<"Inventory"<< endl;
+        cout << "3. " << ANSI_CYAN<< "Search "<< ANSI_RESET << " Product" << endl;
+        cout << "4. " << ANSI_RED<< "Sell "<< ANSI_RESET <<"Product" << endl;
+        cout << "5. " << ANSI_BROWN<< "Exit" <<ANSI_RESET<< endl;
 
         cout << "Enter your choice: ";
         cin >> choice;
+        
 
         switch (choice) {
         case 1:
@@ -125,3 +152,4 @@ int main() {
 
     return 0;
 }
+//-LSV
