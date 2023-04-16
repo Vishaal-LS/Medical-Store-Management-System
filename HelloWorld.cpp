@@ -1,10 +1,10 @@
-#include "pch.h"
+//#include "pch.h"
 #include <iostream>
 #include <vector>
 #include <string>
 using namespace std;
 
-// Define a class for storing product information
+//class for storing product information
 class Product {
 public:
     string name;
@@ -13,7 +13,7 @@ public:
     string expirationDate;
 };
 
-// Function to add a new product to the inventory
+// Function to add a new product
 void addProduct(vector<Product>& inventory) {
     Product product;
     cout << "Enter product name: ";
@@ -28,7 +28,7 @@ void addProduct(vector<Product>& inventory) {
     cout << "Product added successfully!" << endl;
 }
 
-// Function to display all products in the inventory
+// Function to display all products
 void displayInventory(const vector<Product>& inventory) {
     if (inventory.empty()) {
         cout << "Inventory is empty." << endl;
@@ -42,7 +42,7 @@ void displayInventory(const vector<Product>& inventory) {
     }
 }
 
-// Function to search products by name in the inventory
+// Function to search products by name
 void searchProduct(const vector<Product>& inventory, const string& name) {
     bool found = false;
     for (const Product& product : inventory) {
